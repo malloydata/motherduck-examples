@@ -13,13 +13,15 @@ The this repository is an example of containing several datasets stored and shar
 
 To run these examples use
 
+1. Goto https://app.motherduck.com and create an account
 1. Goto https://insiders.vscode.dev/github/malloydata/motherduck-examples?vscode-coi=
 1. Install the Malloy VSCode Extension (it should prompt you)
+1. Goto Motherduck and click settings then 'Copy Token'
 1. Open a Malloy file in the files pane for example [imdb.malloy](imdb/imdb.malloy).
 1. Click on the 'M' in the right panel andd open Open Connections and make a new connection
     type: 'DuckDb' 
     name: 'md', 
-    database: 'md:'
+    add your mother duck token
 1. Run the Open [the attach data notebook](attach_data.malloynb)
 1. Click 'Run All' to attach the example data to your motherduck database.
 
