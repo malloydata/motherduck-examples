@@ -1,3 +1,0 @@
-source: people_base is duckdb.table('data/names.parquet')
-source: titles_base is duckdb.table('data/titles.parquet')
-source: principals_base is duckdb.table('data/principals.parquet')
