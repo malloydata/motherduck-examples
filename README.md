@@ -8,7 +8,7 @@
 
 Together these three components make a great way to explore and access data.
 
-The this repository is an example of containing several datasets stored and shared in Motherduck.  Loading the datamodels in this repository, into Malloy in vscode will allow you to build and run data analysis against these dataset using only your browser. 
+This repository is an example of using these three components together.  The example uses several datasets stored and shared in Motherduck.  Loading the datamodels from this repository, into Malloy in vscode will allow you to build and run data analysis against the data in Motherduck using only your browser.   You can modifiy these examples and/or follow this pattern with your own data.
 
 
 To run these examples use
