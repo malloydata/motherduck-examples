@@ -67,7 +67,7 @@ create or replace table titles as  %{
       join_one: raw_ratings on tconst = raw_ratings.tconst
       join_one: raw_crew on tconst = raw_crew.tconst
     }
-    -- where: raw_ratings.numVotes > 30000
+    where: raw_ratings.numVotes > 10000
     select:
       tconst
       isAdult, originalTitle, primaryTitle

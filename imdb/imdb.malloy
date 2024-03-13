@@ -6,7 +6,7 @@
 //  About Fiddles: https://github.com/lloydtabb/malloy_fiddle_dist/
 
 // import "imdb_duckdb.malloy"
-import "imdb_duckdb.malloy" 
+import "imdb_md.malloy" 
 
 source: people is people_base extend {
 // cast, crew, everyone involved in movies
