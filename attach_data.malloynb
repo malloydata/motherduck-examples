@@ -1,0 +1,13 @@
+>>>markdown
+## This script will attach databases into your Motherduck instance.
+The ATTACH command identifies a data resource and mounts it in your workspace. The Code blocks below attach the various data sources we'll use in these examples.
+>>>markdown
+### IMDB
+>>>sql
+-- connection: md
+
+ATTACH 'md:_share/imdb/a8f144f9-c321-40a0-945f-038aaadd42fb'
+>>>markdown
+### Malloy Sample Data.
+>>>sql
+ATTACH 'md:_share/malloy_samples/46e98f25-5d98-4f63-bed7-4f0e949b9088'
