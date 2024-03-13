@@ -1,26 +1,26 @@
-source: carriers is snowflake.table('malloytest.carriers') extend {
+source: carriers is md.table('malloy_samples.main.carriers') extend {
   primary_key: code
   measure: carrier_count is count()
 }
 
-source: airports is snowflake.table('malloytest.airports') extend {
+source: airports is md.table('malloy_samples.main.airports') extend {
   primary_key: code
   measure: airport_count is count()
   dimension: name is concat(code, '-', full_name )
 }
 
-source: aircraft_models is snowflake.table('malloytest.aircraft_models') extend {
+source: aircraft_models is md.table('malloy_samples.main.aircraft_models') extend {
   primary_key: aircraft_model_code
   measure: aircraft_model_count is count()
 }
 
-source: aircraft is snowflake.table('malloytest.aircraft') extend {
+source: aircraft is md.table('malloy_samples.main.aircraft') extend {
   primary_key: tail_num
   measure: aircraft_count is count()
   join_one: aircraft_models with aircraft_model_code
 }
 
-source: flights is snowflake.table('malloytest.flights') extend { 
+source: flights is md.table('malloy_samples.main.flights') extend { 
   primary_key: id2
 
   // rename some fields as from their physical names
@@ -106,7 +106,7 @@ source: flights is snowflake.table('malloytest.flights') extend {
     //aggregate: flight_count
     limit: 100
   }
-  -- -> {select: latitude,longitude,latitude2,longitude2}
+  -> {select: latitude,longitude,latitude2,longitude2}
 
   # dashboard
   view: carrier_dashboard is {
@@ -135,7 +135,7 @@ source: flights is snowflake.table('malloytest.flights') extend {
         aggregate: flight_count
         group_by: destination.name
       }
-      //nest: top_routes_map
+      nest: top_routes_map
     }
   }
 
