@@ -11,10 +11,30 @@ Together these three components make a great way to explore and access data.
 This repository is an example of using these three components together.  The example uses several datasets stored and shared in Motherduck.  Loading the datamodels from this repository, into Malloy in vscode will allow you to build and run data analysis against the data in Motherduck using only your browser.   You can modifiy these examples and/or follow this pattern with your own data.
 
 
-To run these examples use
+### To run these examples from a web browser
 
 1. Goto https://app.motherduck.com and create an account
 1. Goto https://insiders.vscode.dev/github/malloydata/motherduck-examples?vscode-coi=
+1. Install the Malloy VSCode Extension (it should prompt you)
+1. Goto Motherduck and click settings then 'Copy Token'
+1. Open a Malloy file in the files pane for example [imdb.malloy](imdb/imdb.malloy).
+1. Click on the 'M' in the right panel andd open Open Connections and make a new connection
+    type: 'DuckDb' 
+    name: 'md', 
+    add your mother duck token
+1. Run the Open [the attach data notebook](attach_data.malloynb)
+1. Click 'Run All' to attach the example data to your motherduck database.
+
+### To run these examples from a local version of VSCode
+
+1. Goto https://app.motherduck.com and create an account
+1. [install VSCode](https://code.visualstudio.com/docs/setup/setup-overview)
+1. At a command shell
+    ```
+    git clone https//malloydata/motherduck-examples.git
+    cd motherduck-examples
+    code .
+    ```
 1. Install the Malloy VSCode Extension (it should prompt you)
 1. Goto Motherduck and click settings then 'Copy Token'
 1. Open a Malloy file in the files pane for example [imdb.malloy](imdb/imdb.malloy).
@@ -38,3 +58,6 @@ To run these examples use
 
 ### Ecommerce
 * [Brand Synergy](ecommerce/brand_synergy.malloy)
+
+
+[open setting](command:worknkbench.actions.openSettings2)`
